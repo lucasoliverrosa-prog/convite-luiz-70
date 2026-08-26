@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luiz Rosa 70</title>
+<meta name="theme-color" content="#E4DAC2">
+
+<!-- Prévia ao colar o link no WhatsApp.
+     Quando o site estiver no GitHub Pages, troque a URL abaixo e suba uma capa.png (1200x630) na mesma pasta. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="70 anos do Luiz Rosa">
+<meta property="og:description" content="Sábado, 12 de setembro de 2026, 19h — Casa do Jorge. Confirme sua presença.">
+<meta property="og:image" content="capa.png">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&family=Archivo:wght@400;500&display=swap">
+
+<style>
+  :root{
+    --paper:#E4DAC2;
+    --paper-deep:#DACEB0;
+    --ink:#1C1611;
+    --ink-soft:#6A5C48;
+    --vermelho:#CE3B1C;
+    --mostarda:#DFA02B;
+    --verde:#2B5F52;
+    --line:rgba(28,22,17,.30);
+    --line-soft:rgba(28,22,17,.16);
+  }
+
+  *{box-sizing:border-box}
+  html{background:var(--paper)}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* grão de papel */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:5;
+    opacity:.16;
+    mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  }
+
+  .poster{
+    max-width:620px;
+    margin:0 auto;
+    padding:clamp(16px,4vw,30px);
+    position:relative;
+    z-index:1;
+  }
+  .frame{
+    border:1.5px solid var(--ink);
+    padding:clamp(20px,5vw,38px) clamp(18px,5vw,36px) clamp(26px,5vw,34px);
+    display:flex;
+    flex-direction:column;
+    gap:clamp(26px,5vw,34px);
+  }
+
+  /* ---------- topo ---------- */
+  .apresenta{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:600;
+    font-size:clamp(11px,2.9vw,13px);
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    text-align:center;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    gap:14px;
+    white-space:nowrap;
+  }
+  .apresenta::before,.apresenta::after{content:"";flex:1;height:1.5px;background:var(--ink)}
+
+  /* ---------- arte ---------- */
+  .art{
+    position:relative;
+    width:min(100%,420px);
+    margin:0 auto;
+    aspect-ratio:1;
+    display:grid;
+    place-items:center;
+    overflow:hidden;
+  }
+  .art svg{position:absolute;inset:0;width:100%;height:100%}
+  .art .rays{transform-origin:50% 50%;animation:gira 160s linear infinite}
+  .num{
+    position:relative;
+    font-family:"Anton",Impact,sans-serif;
+    font-size:min(46vw,196px);
+    line-height:.82;
+    letter-spacing:-.02em;
+    color:var(--ink);
+    margin:0;
+    padding-bottom:.06em;
+  }
+  @keyframes gira{to{transform:rotate(360deg)}}
+
+  /* ---------- título ---------- */
+  .titulo{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+  .nome{
+    font-family:"Anton",Impact,sans-serif;
+    font-size:clamp(46px,13.5vw,84px);
+    line-height:.9;
+    letter-spacing:.005em;
+    text-transform:uppercase;
+    margin:0;
+    text-wrap:balance;
+  }
+  .subtitulo{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:600;
+    font-size:clamp(15px,4vw,19px);
+    letter-spacing:.42em;
+    text-transform:uppercase;
+    color:var(--vermelho);
+    margin:0;
+    padding-left:.42em;
+  }
+  .tagline{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:400;
+    font-size:clamp(17px,4.4vw,21px);
+    line-height:1.35;
+    color:var(--ink-soft);
+    max-width:30ch;
+    margin:6px 0 0;
+    text-wrap:balance;
+  }
+
+  /* ---------- bloco de créditos ---------- */
+  .creditos{
+    border-top:1.5px solid var(--ink);
+    border-bottom:1.5px solid var(--ink);
+    padding:clamp(18px,4vw,24px) 0;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    text-align:center;
+  }
+  .cred{display:flex;flex-direction:column;gap:3px}
+  .cred .rot{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:600;
+    font-size:11px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .cred .val{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:700;
+    font-size:clamp(22px,6vw,30px);
+    line-height:1.1;
+    letter-spacing:.02em;
+    text-transform:uppercase;
+  }
+  .cred .val a{color:inherit;text-decoration:none;border-bottom:2px solid var(--vermelho)}
+  .cred .val a:hover{color:var(--vermelho)}
+  .contagem{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:500;
+    font-size:13px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--vermelho);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- botões ---------- */
+  .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .btn{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:600;
+    font-size:15px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    padding:11px 20px 10px;
+    border:1.5px solid var(--ink);
+    background:transparent;
+    color:var(--ink);
+    text-decoration:none;
+    cursor:pointer;
+    transition:background .15s ease,color .15s ease;
+  }
+  .btn:hover{background:var(--ink);color:var(--paper)}
+  .btn--forte{background:var(--vermelho);border-color:var(--vermelho);color:var(--paper)}
+  .btn--forte:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .btn:focus-visible,input:focus-visible,textarea:focus-visible{
+    outline:2.5px solid var(--vermelho);
+    outline-offset:2px;
+  }
+
+  /* ---------- confirmação ---------- */
+  .rsvp{
+    background:var(--paper-deep);
+    border:1.5px solid var(--ink);
+    padding:clamp(20px,5vw,28px);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+  }
+  .rsvp h2{
+    font-family:"Anton",Impact,sans-serif;
+    font-size:clamp(26px,7vw,36px);
+    line-height:1;
+    letter-spacing:.01em;
+    text-transform:uppercase;
+    margin:0;
+    text-align:center;
+  }
+  .rsvp .prazo{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    text-align:center;
+    color:var(--ink-soft);
+    margin:-12px 0 0;
+  }
+  form{display:flex;flex-direction:column;gap:15px}
+  .field{display:flex;flex-direction:column;gap:5px}
+  label{
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  input,textarea{
+    font-family:"Archivo",Arial,sans-serif;
+    font-size:15px;
+    color:var(--ink);
+    background:var(--paper);
+    border:1.5px solid var(--line);
+    border-radius:0;
+    padding:10px 12px;
+    width:100%;
+  }
+  textarea{resize:vertical;min-height:70px}
+  .two{display:grid;grid-template-columns:1fr 110px;gap:12px}
+  .choice{display:flex;gap:8px;flex-wrap:wrap}
+  .choice input{position:absolute;opacity:0;width:1px;height:1px}
+  .choice label{
+    font-size:14px;
+    letter-spacing:.1em;
+    color:var(--ink);
+    border:1.5px solid var(--ink);
+    padding:9px 16px 8px;
+    cursor:pointer;
+    transition:background .15s ease,color .15s ease;
+  }
+  .choice input:checked + label{background:var(--verde);border-color:var(--verde);color:var(--paper)}
+  .choice input:focus-visible + label{outline:2.5px solid var(--vermelho);outline-offset:2px}
+  .note{font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin:0}
+  .sent{display:none;flex-direction:column;gap:6px;text-align:center;padding:4px 0}
+  .sent h3{font-family:"Anton",Impact,sans-serif;font-size:24px;margin:0;text-transform:uppercase;color:var(--verde)}
+  .sent p{margin:0;color:var(--ink-soft);font-size:14.5px}
+  .is-sent form,.is-sent .prazo{display:none}
+  .is-sent .sent{display:flex}
+
+  /* ---------- rodapé ---------- */
+  .fim{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    align-items:center;
+    font-family:"Barlow Condensed",Arial Narrow,sans-serif;
+    font-weight:500;
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .fim span:nth-child(2){color:var(--vermelho)}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important;transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="poster">
+  <div class="frame">
+
+    <div class="apresenta">A família apresenta</div>
+
+    <div class="art">
+      <svg viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+        <g class="rays" id="rays"></g>
+        <circle cx="200" cy="200" r="132" fill="#E4DAC2"></circle>
+        <circle cx="200" cy="200" r="132" fill="none" stroke="#1C1611" stroke-width="3"></circle>
+        <circle cx="200" cy="200" r="144" fill="none" stroke="#DFA02B" stroke-width="6"></circle>
+      </svg>
+      <p class="num">70</p>
+    </div>
+
+    <div class="titulo">
+      <h1 class="nome">Luiz Rosa</h1>
+      <p class="subtitulo">Setenta anos</p>
+      <p class="tagline">Uma noite só, e todo mundo que ele juntou pelo caminho.</p>
+    </div>
+
+    <div class="creditos">
+      <div class="cred">
+        <span class="rot">Data</span>
+        <span class="val">Sábado, 12 de setembro de 2026</span>
+      </div>
+      <div class="cred">
+        <span class="rot">Horário</span>
+        <span class="val">19h</span>
+      </div>
+      <div class="cred">
+        <span class="rot">Local</span>
+        <span class="val"><a href="https://maps.app.goo.gl/fwFCYKPxeBUJAuPH6" target="_blank" rel="noopener">Casa do Jorge</a></span>
+      </div>
+      <div class="contagem" id="contagem"></div>
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="https://maps.app.goo.gl/fwFCYKPxeBUJAuPH6" target="_blank" rel="noopener">Como chegar</a>
+      <a class="btn" id="agenda" href="#" target="_blank" rel="noopener">Salvar na agenda</a>
+    </div>
+
+    <section class="rsvp" id="rsvp">
+      <h2>Confirme sua presença</h2>
+      <p class="prazo">Até 5 de setembro</p>
+
+      <form id="form" novalidate>
+        <div class="choice" role="group" aria-label="Você vai?">
+          <input type="radio" name="resposta" id="sim" value="Vou" checked>
+          <label for="sim">Vou sim</label>
+          <input type="radio" name="resposta" id="nao" value="Não vou">
+          <label for="nao">Não vou conseguir</label>
+        </div>
+
+        <div class="two">
+          <div class="field">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="pessoas">Pessoas</label>
+            <input type="number" id="pessoas" name="pessoas" min="1" max="20" value="1" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="recado">Recado para o Luiz</label>
+          <textarea id="recado" name="recado" rows="3"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--forte" type="submit" id="enviar">Confirmar</button>
+        </div>
+        <p class="note" id="modo"></p>
+      </form>
+
+      <div class="sent" role="status" aria-live="polite">
+        <h3 id="sent-title">Confirmado!</h3>
+        <p id="sent-text">Anotamos aqui. Até dia 12.</p>
+      </div>
+    </section>
+
+    <div class="fim">
+      <span>12.09.2026</span><span>&#9670;</span><span>Casa do Jorge</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // ————— preencher quando a planilha estiver pronta —————
+  const SHEET_URL = "https://script.google.com/macros/s/AKfycbzps2X3c_TOrL3ItkWJ6pPmgvNDzzsLuM56PkhJHtJOG9HfayAAmNlTZEkjdd-7EYh8/exec";   // URL do Apps Script
+  // ———————————————————————————————————————————————
+  const MAPS_URL = "https://maps.app.goo.gl/fwFCYKPxeBUJAuPH6";
+  const FESTA = new Date("2026-09-12T19:00:00-03:00");
+
+  // raios recortados à mão
+  (function(){
+    const g = document.getElementById("rays");
+    const larguras = [3.6, 5.4, 2.8, 4.6, 6.2, 3.2, 5.0, 4.0];
+    const total = 30;
+    let saida = "";
+    for (let i = 0; i < total; i++){
+      const centro = i * (360 / total) + (i % 2 ? 1.4 : -0.8);
+      const w = larguras[i % larguras.length];
+      const cor = (i % 7 === 3) ? "#DFA02B" : "#CE3B1C";
+      const p = (ang) => {
+        const r = (ang - 90) * Math.PI / 180;
+        return (200 + Math.cos(r) * 340).toFixed(1) + "," + (200 + Math.sin(r) * 340).toFixed(1);
+      };
+      saida += '<polygon fill="' + cor + '" points="200,200 ' + p(centro - w) + ' ' + p(centro + w) + '"/>';
+    }
+    g.innerHTML = saida;
+  })();
+
+  // contagem regressiva
+  (function(){
+    const dias = Math.ceil((FESTA - new Date()) / 86400000);
+    document.getElementById("contagem").textContent =
+      dias > 1 ? "Faltam " + dias + " dias" : dias === 1 ? "É amanhã" : dias === 0 ? "É hoje" : "";
+  })();
+
+  // google agenda
+  (function(){
+    const fim = new Date(FESTA.getTime() + 5 * 3600000);
+    const fmt = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+    document.getElementById("agenda").href =
+      "https://calendar.google.com/calendar/render?action=TEMPLATE"
+      + "&text=" + encodeURIComponent("70 anos do Luiz Rosa")
+      + "&dates=" + fmt(FESTA) + "/" + fmt(fim)
+      + "&location=" + encodeURIComponent("Casa do Jorge")
+      + "&details=" + encodeURIComponent("Local: " + MAPS_URL + "\nConfirme sua presença: " + location.href);
+  })();
+
+  // formulário
+  (function(){
+    const form = document.getElementById("form");
+    const box  = document.getElementById("rsvp");
+    const modo = document.getElementById("modo");
+    if (!SHEET_URL) modo.textContent = "Modo de teste: a resposta ainda não é salva em lugar nenhum.";
+
+    form.addEventListener("submit", async function(e){
+      e.preventDefault();
+      const nome = document.getElementById("nome");
+      if (!nome.value.trim()){ nome.focus(); modo.textContent = "Escreva seu nome para confirmar."; return; }
+
+      const dados = {
+        resposta: form.resposta.value,
+        nome: nome.value.trim(),
+        pessoas: document.getElementById("pessoas").value,
+        recado: document.getElementById("recado").value.trim()
+      };
+
+      const vai = dados.resposta === "Vou";
+      document.getElementById("sent-title").textContent = vai ? "Confirmado!" : "Combinado";
+      document.getElementById("sent-text").textContent  = vai
+        ? "Anotamos aqui. Até dia 12."
+        : "Obrigado por avisar — vamos sentir sua falta.";
+
+      if (SHEET_URL){
+        const btn = document.getElementById("enviar");
+        btn.textContent = "Enviando…";
+        try {
+          await fetch(SHEET_URL, { method:"POST", mode:"no-cors", body: JSON.stringify(dados) });
+        } catch (err){
+          btn.textContent = "Confirmar";
+          modo.textContent = "Não deu para enviar agora. Tente de novo em instantes.";
+          return;
+        }
+      } else {
+        console.log("RSVP (teste):", dados);
+      }
+      box.classList.add("is-sent");
+    });
+  })();
+</script>
+</body>
+</html>
